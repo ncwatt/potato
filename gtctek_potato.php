@@ -26,5 +26,5 @@ if ( ! function_exists( 'add_action' ) ) {
 define( 'GTCTEK_POTATO__VERSION', $gtctek_potato_ver );
 define( 'GTCTEK_POTATO__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GTCTEK_POTATO__PLUGIN_URI', plugin_dir_url( __FILE__ ) );
-define( 'GTCTEK_POTATO__PREPEND', 'gtctek' );
+define( 'GTCTEK_POTATO__PREPEND', 'gtctek-potato' );
 define( 'GTCTEK_POTATO__TEXT_DOMAIN', 'gtctek-potato' );
