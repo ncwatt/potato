@@ -28,3 +28,13 @@ define( 'GTCTEK_POTATO__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GTCTEK_POTATO__PLUGIN_URI', plugin_dir_url( __FILE__ ) );
 define( 'GTCTEK_POTATO__PREPEND', 'gtctek-potato' );
 define( 'GTCTEK_POTATO__TEXT_DOMAIN', 'gtctek-potato' );
+
+// Include required classes
+require_once( GTCTEK_POTATO__PLUGIN_DIR . 'classes/class.gtctek.potato.activate.php' );
+require_once( GTCTEK_POTATO__PLUGIN_DIR . 'classes/class.gtctek.potato.settings.php' );
+require_once( GTCTEK_POTATO__PLUGIN_DIR . 'classes/class.gtctek.potato.posts.php' );
+
+// Trigger initialise actions across difference classes
+add_action( 'init', array( 'GTCTEK_Potato_Settings', 'init' ) );
+add_action( 'init', array( 'GTCTEK_Potato_Posts', 'init' ) );
+register_activation_hook( __FILE__, array( 'GTCTEK_Potato_Activate', 'init' ) );
